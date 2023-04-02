@@ -1,9 +1,23 @@
 .pass-heading {
+    /* border-image: linear-gradient(#f6b73c, #4d9f0c) 30;
+    border-width: 2px;
+    border-style: solid; */
     border: 2px solid black;
     border-radius: 0.15em;
 }
 
 .main-area {
     margin-top: 7em;
-    border: 2px solid black;
+    /* border: 2px solid black; */
 }
+
+.sidebar-list li {
+    list-style: none;
+    font-size: large;
+}
+
+/* .sidebar-list li:hover {
+    background-color: rgb(236, 230, 230);
+    border-radius: 0.19em;
+    padding: 0.15em;
+} */
