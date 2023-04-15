@@ -23,9 +23,7 @@
 
 <body>
     <div class="container mt-5">
-        <h3 class="text-center pass-heading">
-            Password Manager
-        </h3>
+        <h3 class="text-center pass-heading">Password Manager</h3>
         <div class="row main-area p-3">
             <div class="col-md-3 border border-secondary rounded">
                 <div class="container-fluid my-3">
@@ -38,24 +36,124 @@
                         </button>
 
                         <!-- show all passwords -->
-                        <li class="py-2"><button type="button" id="show-pass" class="btn btn-outline-dark"> <i
-                                    class="fa-solid fa-eye fa-xl"></i> Show all passwords</li>
+                        <li class="py-2"><button type="button" id="show_pass" class="btn btn-outline-dark"> <i
+                                    class="fa-solid fa-eye fa-xl"></i> View all passwords</li>
                         </button>
 
                         <!-- Edit a passowrd -->
-                        <li class="py-2"><button type="button" id="edit-pass" class="btn btn-outline-dark"><i
-                                    class="fa-solid fa-file-pen fa-xl"></i> Edit a Password</button>
+                        <li class="py-2"><button type="button" id="custom-password" class="btn btn-outline-dark"><i
+                                    class="fa-solid fa-file-pen fa-xl"></i> Custom Password</button>
                         </li>
 
                         <!-- generate new password -->
                         <li class="py-2"><button type="button" id="gen-pass" class="btn btn-outline-dark"><i
-                                    class="fa-solid fa-key fa-xl"></i> Generate new password</button>
+                                    class="fa-solid fa-key fa-xl"></i>
+                                Generate new password</button>
                         </li>
                     </ul>
                 </div>
             </div>
             <div class="col-md-9">
-                <p id="output"> </p>
+                <p id="output">
+                <div class="homepage">
+                    <h3>Welcome to password manager</h3>
+                    <p class="home">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates facilis quod illum quisquam
+                        dolorum cumque, voluptatibus perferendis maxime dolorem est quos vero deserunt beatae ex
+                        laboriosam modi impedit reiciendis tempore!
+                    </p>
+                </div>
+
+                <div class="generate_new_password" hidden>
+                    <h3>Generate New Password</h3>
+                    <form action="">
+                        <label for="asociated_email" class="form-label">Asociated Email <span
+                                class="label_value">*optional</span></label>
+                        <input type="email" name="" id="asociated_email" class="form-control">
+
+                        <div class="row mt-3">
+                            <div class="col-md-6">
+                                <label for="asociated_account" class="form-label">Asociated account <span
+                                        class="label_value">*required</span></label>
+                                <input type="text" name="" id="asociated_account" class="form-control" required>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="password_strength" class="form-label">Choose the strength of your
+                                    password <span class="label_value">*required</span></label>
+                                <input type="number" name="" id="password_strength" min="6" max="20"
+                                    class="form-control" required>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary mt-3">Submit</button>
+                    </form>
+                </div>
+                <div class="view_all_passwords" hidden>
+                    <div class="row">
+                        <div class="col-md-8">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Asociated email</th>
+                                        <th scope="col">Asociated account</th>
+                                        <th scope="col">Password</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th>1</th>
+                                        <td class="copy_email">dummy.606@gmail.com</td>
+                                        <td>T Launcher</td>
+                                        <td class="copy_password">password123</td>
+                                    </tr>
+                                    <tr>
+                                        <th>2</th>
+                                        <td classcopy_email=>mail.302@yahoo.com</td>
+                                        <td>W3schools</td>
+                                        <td class="copy_password">dummy_password</td>
+                                    </tr>
+                                    <tr>
+                                        <th>3</th>
+                                        <td classcopy_email=>cheems.223@yandex.com</td>
+                                        <td>Mozilla</td>
+                                        <td class="copy_password">secret_password</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="col-md-4">
+                            <form class="d-flex" role="search">
+                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                                <button class="btn btn-outline-success" type="submit">Search</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="custom-password" hidden>
+                    <h3>Add Custom Password</h3>
+                    <form action="">
+                        <label for="asociated_email" class="form-label">Asociated Email <span
+                                class="label_value">*optional</span></label>
+                        <input type="email" name="" id="asociated_email" class="form-control">
+
+                        <div class="row mt-3">
+                            <div class="col-md-6">
+                                <label for="asociated_account" class="form-label">Asociated account <span
+                                        class="label_value">*required</span></label>
+                                <input type="text" name="" id="asociated_account" class="form-control" required>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="password_strength" class="form-label">Enter your password <span
+                                        class="label_value">*required</span></label>
+                                <input type="text" name="" id="password_strength" class="form-control" required>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary mt-3">Submit</button>
+                    </form>
+                </div>
+                </p>
             </div>
         </div>
     </div>
@@ -66,6 +164,6 @@
     crossorigin="anonymous"></script>
 
 <script src="script.js"></script>
-<script type="text/javascript" src="/eel.js"></script>
+<!-- <script type="text/javascript" src="/eel.js"></script> -->
 
 </html>
