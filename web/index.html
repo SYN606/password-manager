@@ -35,21 +35,21 @@
                                     class="fa-solid fa-house fa-xl"></i> Home</li>
                         </button>
 
-                        <!-- show all passwords -->
-                        <li class="py-2"><button type="button" id="show_pass" class="btn btn-outline-dark"> <i
-                                    class="fa-solid fa-eye fa-xl"></i> View all passwords</li>
-                        </button>
-
-                        <!-- Edit a passowrd -->
-                        <li class="py-2"><button type="button" id="custom-password" class="btn btn-outline-dark"><i
-                                    class="fa-solid fa-file-pen fa-xl"></i> Custom Password</button>
-                        </li>
-
                         <!-- generate new password -->
                         <li class="py-2"><button type="button" id="gen-pass" class="btn btn-outline-dark"><i
                                     class="fa-solid fa-key fa-xl"></i>
                                 Generate new password</button>
                         </li>
+
+                        <!-- Costom password -->
+                        <li class="py-2"><button type="button" id="custom-password" class="btn btn-outline-dark"><i
+                                    class="fa-solid fa-file-pen fa-xl"></i> Custom Password</button>
+                        </li>
+
+                        <!-- show all passwords -->
+                        <li class="py-2"><button type="button" id="show_pass" class="btn btn-outline-dark"> <i
+                                    class="fa-solid fa-eye fa-xl"></i> View all passwords</li>
+                        </button>
                     </ul>
                 </div>
             </div>
@@ -66,26 +66,27 @@
 
                 <div class="generate_new_password" hidden>
                     <h3>Generate New Password</h3>
-                    <form action="">
+                    <form id="generate_password">
                         <label for="asociated_email" class="form-label">Asociated Email <span
                                 class="label_value">*optional</span></label>
-                        <input type="email" name="" id="asociated_email" class="form-control">
+                        <input type="email" name="asociated_email" id="asociated_email" class="form-control">
 
                         <div class="row mt-3">
                             <div class="col-md-6">
                                 <label for="asociated_account" class="form-label">Asociated account <span
                                         class="label_value">*required</span></label>
-                                <input type="text" name="" id="asociated_account" class="form-control" required>
+                                <input type="text" name="asociated_account" id="asociated_account" class="form-control"
+                                    required>
                             </div>
 
                             <div class="col-md-6">
                                 <label for="password_strength" class="form-label">Choose the strength of your
                                     password <span class="label_value">*required</span></label>
-                                <input type="number" name="" id="password_strength" min="6" max="20"
+                                <input type="number" name="password_strength" id="password_strength" min="6" max="20"
                                     class="form-control" required>
                             </div>
                         </div>
-                        <button type="submit" class="btn btn-primary mt-3">Submit</button>
+                        <button type="submit" id="gen_pass" class="btn btn-primary mt-3">Submit</button>
                     </form>
                 </div>
                 <div class="view_all_passwords" hidden>
@@ -109,13 +110,13 @@
                                     </tr>
                                     <tr>
                                         <th>2</th>
-                                        <td classcopy_email=>mail.302@yahoo.com</td>
+                                        <td class="copy_email"=>mail.302@yahoo.com</td>
                                         <td>W3schools</td>
                                         <td class="copy_password">dummy_password</td>
                                     </tr>
                                     <tr>
                                         <th>3</th>
-                                        <td classcopy_email=>cheems.223@yandex.com</td>
+                                        <td class="copy_email"=>cheems.223@yandex.com</td>
                                         <td>Mozilla</td>
                                         <td class="copy_password">secret_password</td>
                                     </tr>
@@ -132,7 +133,7 @@
                 </div>
                 <div class="custom-password" hidden>
                     <h3>Add Custom Password</h3>
-                    <form action="">
+                    <form id="custom_password">
                         <label for="asociated_email" class="form-label">Asociated Email <span
                                 class="label_value">*optional</span></label>
                         <input type="email" name="" id="asociated_email" class="form-control">
@@ -164,6 +165,6 @@
     crossorigin="anonymous"></script>
 
 <script src="script.js"></script>
-<!-- <script type="text/javascript" src="/eel.js"></script> -->
+<script type="text/javascript" src="/eel.js"></script>
 
 </html>

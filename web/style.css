@@ -26,6 +26,6 @@ form > label .label_value {
     color: green;
 }
 
-.copy_email{
+.copy_email, .copy_password{
     cursor: copy;
 }
